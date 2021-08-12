@@ -6,16 +6,16 @@ use Hyperf\View\Engine\EngineInterface;
 
 class TwigEngine implements EngineInterface {
     public function render($template, $data, $config):string{
-        $template = str_ireplace('.','/',$template) . env('subffix','.twig');
+        $template = str_ireplace('.','/',$template) . env('TWIG_SUBFFIX','.twig');
         $loader = new FilesystemLoader($config['view_path']);
         $twig = new Environment($loader, [
             'cache' => $config['cache_path'],
-            'debug' => env('debug',false),
-            'charset' => env('charset','UTF-8'),
-            'strict_variables' => env('strict_variables',false),
-            'autoescape' => env('autoescape','html'),
-            'auto_reload' => env('auto_reload',null),
-            'optimizations' => env('optimizations',-1),
+            'debug' => env('TWIG_DEBUG',false),
+            'charset' => env('TWIG_CHARSET','UTF-8'),
+            'strict_variables' => env('TWIG_STRICT_VARIABLES',false),
+            'autoescape' => env('TWIG_AUTOESCAPE','html'),
+            'auto_reload' => env('TWIG_AUTO_RELOAD',null),
+            'optimizations' => env('TWIG_OPTIMIZATIONS',-1),
 
         ]);
         return $twig->render($template, $data);
