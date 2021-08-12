@@ -15,5 +15,8 @@
         "psr-4": {
             "Yapf\\HyperfTwig\\": "src/"
         }
+    },
+    "require-dev": {
+        "hyperf/view": "^2.2"
     }
 }

@@ -4,7 +4,7 @@ use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
 use Hyperf\View\Engine\EngineInterface;
 
-class TwigEngine extends EngineInterface {
+class TwigEngine implements EngineInterface {
     public function render($template, $data, $config):string{
         $template = str_ireplace('.','/',$template) . env('subffix','.twig');
         $loader = new FilesystemLoader($config['view_path']);
