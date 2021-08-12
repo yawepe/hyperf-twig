@@ -15,7 +15,7 @@ class TwigEngine implements EngineInterface {
             'strict_variables' => env('strict_variables',false),
             'autoescape' => env('autoescape','html'),
             'auto_reload' => env('auto_reload',null),
-            'optimizations' => evn('optimizations',-1),
+            'optimizations' => env('optimizations',-1),
 
         ]);
         return $twig->render($template, $data);
