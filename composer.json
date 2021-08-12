@@ -1,0 +1,19 @@
+{
+    "name": "yapf/hyperf-twig",
+    "description": "associate hyperf with twig template",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "ywp",
+            "email": "yawepe@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yapf\\HyperfTwig\\": "src/"
+        }
+    }
+}
